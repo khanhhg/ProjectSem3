@@ -1,0 +1,46 @@
+﻿@model RentBook.Models.Customer
+
+<div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" ariahidden="true">×</button>
+         <h3 class="modal-title">Create New</h3> 
+</div>
+
+
+@using (@Html.BeginForm())
+{
+         @Html.AntiForgeryToken()
+         <div class="modal-body">
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group"> 
+           @Html.LabelFor(model => model.CusEmail, htmlAttributes: new { @class = "control-label col-sm-4" })
+      <div class="col-sm-6"> 
+            @Html.EditorFor(model => model.CusEmail, new { htmlAttributes = new { @class = "form-control" } })                    
+         @Html.ValidationMessageFor(model => model.CusEmail, "", new { @class = "text-danger" })                
+         </div>             
+    </div>
+
+        <div class="form-group">               
+          @Html.LabelFor(model => model.PassWord, htmlAttributes: new { @class = "control-label col-sm-4" })                
+         <div class="col-sm-6">                     
+            @Html.EditorFor(model => model.PassWord, new { htmlAttributes = new { @class = "form-control" } })                   
+              @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })                
+             </div>            
+         </div>
+    </div>
+</div>
+
+            <div class="modal-footer">
+             <span id="progress" class="text-center" style="display: none;">            
+                 <img src="~/Content/images/ajax-loader.gif" alt="wait" />             Wait..         </span>        
+     <input type="submit" value="Add" class="btn btn-default btn-primary" />        
+     <button class="btn btn-warning" data-dismiss="modal">Close</button>    
+             </div>
+
+
+
+            <script>
+ $("form").removeData("validator");
+$("form").removeData("unobtrusiveValidation");
+$.validator.unobtrusive.parse("form");
+            </script>

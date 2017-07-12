@@ -1,0 +1,83 @@
+﻿@model RentBook.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusBirthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusBirthday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

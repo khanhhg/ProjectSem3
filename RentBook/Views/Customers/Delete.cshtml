@@ -1,0 +1,89 @@
+﻿@model RentBook.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PassWord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PassWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CusBirthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CusBirthday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

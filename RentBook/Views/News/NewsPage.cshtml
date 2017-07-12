@@ -1,0 +1,16 @@
+﻿@using RentBook.Models
+@model List<News>
+@{
+    ViewBag.Title = "NewsPage";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="fix single_popular">
+
+        <img src="@Url.Content("~/Images/News/"+item.NewsImage)" class="floatleft" width="200" height="200" />
+        <h4><a href="@Url.Action("Detail",new { @NewsID =item.NewsID })">@item.NewsName</a></h4>
+        <p>@item.NewsContent</p>
+    </div>
+}

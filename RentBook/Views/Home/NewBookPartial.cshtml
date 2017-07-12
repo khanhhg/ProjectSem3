@@ -1,0 +1,16 @@
+﻿@using RentBook.Models;
+@model List<Book>
+    
+@foreach (var item in Model)
+{
+    <div class="fix single_popular">
+        
+        <img src="@Url.Content("~/Images/Book/"+item.BookImage)" class="floatleft" width="40" height="50" />
+        <h2><a href="@Url.Action("BookDetail",new { @BookID =item.BookID })">@item.BookName</a> Price:@item.Price</h2>
+        
+       
+        <p>@item.UpdateDate</p>
+    </div>
+}
+
+

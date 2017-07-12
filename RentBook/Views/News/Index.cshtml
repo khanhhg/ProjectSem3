@@ -1,0 +1,46 @@
+﻿@model IEnumerable<RentBook.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewsImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewsImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NewsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NewsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NewsID })
+        </td>
+    </tr>
+}
+
+</table>

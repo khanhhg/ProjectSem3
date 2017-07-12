@@ -1,0 +1,86 @@
+﻿@model IEnumerable<RentBook.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CusEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassWord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CusAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CusPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CusGender)
+           
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CusBirthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CusEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassWord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CusAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CusPhone)
+        </td>
+   
+            @*@Html.DisplayFor(modelItem => item.CusGender)*@
+            @if(item.CusGender == false)
+            {
+                <td>Male</td>
+            }
+            else if (item.CusGender == true)
+            {
+                <td>Feale</td>
+            }
+                
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.CusBirthday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+        </td>
+    </tr>
+}
+
+</table>

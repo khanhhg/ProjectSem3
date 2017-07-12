@@ -1,0 +1,84 @@
+﻿@model RentBook.Models.Author
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Authors", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Author</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuthorName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AuthorName, new { htmlAttributes = new { @class = "form-control", placeholder = "Author Name" } })
+                @Html.ValidationMessageFor(model => model.AuthorName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Auphone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Auphone, new { htmlAttributes = new { @class = "form-control", placeholder = "Author Phone" } })
+                @Html.ValidationMessageFor(model => model.Auphone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.AuAddress, new { htmlAttributes = new { @class = "form-control", placeholder = "Author Address" } })*@
+                @Html.TextAreaFor(model => model.AuAddress, new
+           {
+               @class = "form-control",
+               placeholder = "Author Address",
+               //style = "width: 100%; max-width: 100%;",
+               @rows =3
+           })
+                @Html.ValidationMessageFor(model => model.AuAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuStory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.AuStory, new { htmlAttributes = new { @class = "form-control",placeholder = "Author Story" } })*@
+                @Html.TextAreaFor(model => model.AuStory, new
+                 {
+                     @class = "form-control",
+                     placeholder = "Author Address",
+                     style = "width: 100%; max-width: 100%;",
+                     @rows = 5
+                 })
+                @Html.ValidationMessageFor(model => model.AuStory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AuImage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.AuImage, new { htmlAttributes = new { @class = "form-control" } })*@
+                <input type="file" name="AuImg">
+                @Html.ValidationMessageFor(model => model.AuImage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

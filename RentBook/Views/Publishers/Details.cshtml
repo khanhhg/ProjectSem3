@@ -1,0 +1,43 @@
+﻿@model RentBook.Models.Publisher
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Publisher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublisherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pphone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PublisherID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

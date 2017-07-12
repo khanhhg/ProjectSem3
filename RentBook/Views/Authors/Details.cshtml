@@ -1,0 +1,59 @@
+﻿@model RentBook.Models.Author
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Author</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Auphone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Auphone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuStory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuStory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AuthorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
