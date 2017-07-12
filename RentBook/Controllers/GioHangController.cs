@@ -220,10 +220,10 @@ namespace RentBook.Controllers
                 {
               
                     BorrowBookDetail ctdh = new BorrowBookDetail();
-                    ctdh.OrderID = ddh.OrderID;
+                    ctdh.BorrowBookID = ddh.BorrowBookID;
                     ctdh.BookID = item.BookID;
                     //ctdh.TenSanPham = item.TenSanPham;
-                    ctdh.Quantity = item.Quantity;
+                    //ctdh.Quantity = item.Quantity;
                     ctdh.Price = item.Price;
                     db.BorrowBookDetails.Add(ctdh);
                 }

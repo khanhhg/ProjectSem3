@@ -34,9 +34,9 @@
   </EntityType>
   <EntityType Name="BorrowBook">
     <Key>
-      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="BorrowBookID" />
     </Key>
-    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BorrowBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BorrowDay" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="CustomerID" Type="Int32" Nullable="false" />
     <Property Name="OderTotal" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
@@ -46,12 +46,11 @@
   </EntityType>
   <EntityType Name="BorrowBookDetail">
     <Key>
-      <PropertyRef Name="OrderDetailID" />
+      <PropertyRef Name="BorrowBookDetailID" />
     </Key>
-    <Property Name="OrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="BorrowBookDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BorrowBookID" Type="Int32" Nullable="false" />
     <Property Name="BookID" Type="Int32" Nullable="false" />
-    <Property Name="Quantity" Type="Int32" Nullable="false" />
     <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <NavigationProperty Name="Book" Relationship="Self.FK_BorrowBookDetail_Book" FromRole="BorrowBookDetail" ToRole="Book" />
     <NavigationProperty Name="BorrowBook" Relationship="Self.FK_BorrowBookDetail_BorrowBook" FromRole="BorrowBookDetail" ToRole="BorrowBook" />
@@ -114,10 +113,9 @@
       <PropertyRef Name="ReturnBookID" />
     </Key>
     <Property Name="ReturnBookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="BorrowBookID" Type="Int32" Nullable="false" />
     <Property Name="BookID" Type="Int32" Nullable="false" />
     <Property Name="ReturnDay" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="Quantity" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Book" Relationship="Self.FK_ReturnBook_Book" FromRole="ReturnBook" ToRole="Book" />
     <NavigationProperty Name="BorrowBook" Relationship="Self.FK_ReturnBook_BorrowBook" FromRole="ReturnBook" ToRole="BorrowBook" />
   </EntityType>
@@ -208,10 +206,10 @@
     <End Role="BorrowBookDetail" Type="Self.BorrowBookDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BorrowBook">
-        <PropertyRef Name="OrderID" />
+        <PropertyRef Name="BorrowBookID" />
       </Principal>
       <Dependent Role="BorrowBookDetail">
-        <PropertyRef Name="OrderID" />
+        <PropertyRef Name="BorrowBookID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -220,10 +218,10 @@
     <End Role="ReturnBook" Type="Self.ReturnBook" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BorrowBook">
-        <PropertyRef Name="OrderID" />
+        <PropertyRef Name="BorrowBookID" />
       </Principal>
       <Dependent Role="ReturnBook">
-        <PropertyRef Name="OrderID" />
+        <PropertyRef Name="BorrowBookID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

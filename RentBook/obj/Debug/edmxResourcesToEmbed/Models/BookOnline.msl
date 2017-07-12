@@ -32,7 +32,7 @@
     <EntitySetMapping Name="BorrowBooks">
       <EntityTypeMapping TypeName="BookOnlineModel.BorrowBook">
         <MappingFragment StoreEntitySet="BorrowBook">
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="BorrowBookID" ColumnName="BorrowBookID" />
           <ScalarProperty Name="BorrowDay" ColumnName="BorrowDay" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
           <ScalarProperty Name="OderTotal" ColumnName="OderTotal" />
@@ -42,10 +42,9 @@
     <EntitySetMapping Name="BorrowBookDetails">
       <EntityTypeMapping TypeName="BookOnlineModel.BorrowBookDetail">
         <MappingFragment StoreEntitySet="BorrowBookDetail">
-          <ScalarProperty Name="OrderDetailID" ColumnName="OrderDetailID" />
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="BorrowBookDetailID" ColumnName="BorrowBookDetailID" />
+          <ScalarProperty Name="BorrowBookID" ColumnName="BorrowBookID" />
           <ScalarProperty Name="BookID" ColumnName="BookID" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -107,10 +106,9 @@
       <EntityTypeMapping TypeName="BookOnlineModel.ReturnBook">
         <MappingFragment StoreEntitySet="ReturnBook">
           <ScalarProperty Name="ReturnBookID" ColumnName="ReturnBookID" />
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="BorrowBookID" ColumnName="BorrowBookID" />
           <ScalarProperty Name="BookID" ColumnName="BookID" />
           <ScalarProperty Name="ReturnDay" ColumnName="ReturnDay" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

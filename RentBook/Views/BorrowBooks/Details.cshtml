@@ -1,0 +1,43 @@
+﻿@model RentBook.Models.BorrowBook
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BorrowBook</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BorrowDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BorrowDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OderTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OderTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CusName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BorrowBookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

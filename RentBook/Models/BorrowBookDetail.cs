@@ -14,10 +14,9 @@ namespace RentBook.Models
     
     public partial class BorrowBookDetail
     {
-        public int OrderDetailID { get; set; }
-        public int OrderID { get; set; }
+        public int BorrowBookDetailID { get; set; }
+        public int BorrowBookID { get; set; }
         public int BookID { get; set; }
-        public int Quantity { get; set; }
         public decimal Price { get; set; }
     
         public virtual Book Book { get; set; }

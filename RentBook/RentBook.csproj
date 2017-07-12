@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
+    <Compile Include="Controllers\BorrowBooksController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
@@ -169,11 +170,11 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PublishersController.cs" />
-    <Compile Include="Controllers\ReturnBooksController.cs" />
     <Compile Include="FeedBacksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Models\Author.cs">
       <DependentUpon>BookOnline.tt</DependentUpon>
     </Compile>
@@ -195,7 +196,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookOnline.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Models\BorrowBook.cs">
       <DependentUpon>BookOnline.tt</DependentUpon>
     </Compile>
@@ -264,6 +264,7 @@
     <Content Include="Images\banner4.jpg" />
     <Content Include="Images\banner5.jpg" />
     <Content Include="Images\banner6.JPG" />
+    <Content Include="Images\bia.jpg" />
     <Content Include="Images\Book\banner1.jpg" />
     <Content Include="Images\Book\Conan.jpg" />
     <Content Include="Images\Book\CongChuaOri.jpg" />
@@ -274,12 +275,15 @@
     <Content Include="Images\Book\Sakura.jpg" />
     <Content Include="Images\Book\Subasa.jpg" />
     <Content Include="Images\cart-3.png" />
+    <Content Include="Images\DM-BookBanner.jpg" />
     <Content Include="Images\iconCart.jpg" />
+    <Content Include="Images\image_banner.jpg" />
+    <Content Include="Images\Image_top.JPG" />
     <Content Include="Images\News\banner1.jpg" />
     <Content Include="Models\BookOnline.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BookOnline.Context.cs</LastGenOutput>
       <DependentUpon>BookOnline.edmx</DependentUpon>
+      <LastGenOutput>BookOnline.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\BookOnline.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -313,7 +317,9 @@
     <Content Include="Scripts\selectnav.min.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Scripts\shop.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -364,9 +370,7 @@
     <Content Include="Views\News\Edit.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Home\BookDetail.cshtml" />
-    <Content Include="Views\Home\_LoginPartial.cshtml" />
     <Content Include="Views\Home\NewBookPartial.cshtml" />
-    <Content Include="Views\Shopcart\GioHangPartial.cshtml" />
     <Content Include="Views\GioHang\GioHangPartial.cshtml" />
     <Content Include="Views\GioHang\SuaGioHang.cshtml" />
     <Content Include="Views\GioHang\ThongBao.cshtml" />
@@ -376,11 +380,13 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\XemChiTiet.cshtml" />
-    <Content Include="Views\ReturnBooks\Create.cshtml" />
-    <Content Include="Views\ReturnBooks\Delete.cshtml" />
-    <Content Include="Views\ReturnBooks\Details.cshtml" />
-    <Content Include="Views\ReturnBooks\Edit.cshtml" />
-    <Content Include="Views\ReturnBooks\Index.cshtml" />
+    <Content Include="Views\Home\NewsPartial.cshtml" />
+    <Content Include="Views\News\NewsPage.cshtml" />
+    <Content Include="Views\BorrowBooks\Create.cshtml" />
+    <Content Include="Views\BorrowBooks\Delete.cshtml" />
+    <Content Include="Views\BorrowBooks\Details.cshtml" />
+    <Content Include="Views\BorrowBooks\Edit.cshtml" />
+    <Content Include="Views\BorrowBooks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

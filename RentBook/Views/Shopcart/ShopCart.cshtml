@@ -1,5 +1,5 @@
 ﻿@using RentBook.Models
-@model List<ShopCart>
+@model List<ItemGioHang>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
@@ -46,7 +46,7 @@ Body Section
                     @foreach (var item in Model)
                     {
                     <tr>
-                        <td><img src="@Url.Content("~/Images/Book/"+item.)"></td>
+                        <td><img src="@Url.Content("~/Images/Book/"+item.BookImage)"></td>
                         <td>@item.BookName</td>
                         @*<td> - </td>
                             <td><span class="shopBtn"><span class="icon-ok"></span></span></td>*@

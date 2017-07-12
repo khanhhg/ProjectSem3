@@ -10,116 +10,112 @@ using RentBook.Models;
 
 namespace RentBook.Controllers
 {
-    public class ReturnBooksController : Controller
+    public class BorrowBooksController : Controller
     {
         private BookOnlineEntities db = new BookOnlineEntities();
 
-        // GET: ReturnBooks
+        // GET: BorrowBooks
         public ActionResult Index()
         {
-            var returnBooks = db.ReturnBooks.Include(r => r.Book).Include(r => r.BorrowBook);
-            return View(returnBooks.ToList());
+            var borrowBooks = db.BorrowBooks.Include(b => b.Customer);
+            return View(borrowBooks.ToList());
         }
 
-        // GET: ReturnBooks/Details/5
+        // GET: BorrowBooks/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ReturnBook returnBook = db.ReturnBooks.Find(id);
-            if (returnBook == null)
+            BorrowBook borrowBook = db.BorrowBooks.Find(id);
+            if (borrowBook == null)
             {
                 return HttpNotFound();
             }
-            return View(returnBook);
+            return View(borrowBook);
         }
 
-        // GET: ReturnBooks/Create
+        // GET: BorrowBooks/Create
         public ActionResult Create()
         {
-            ViewBag.BookID = new SelectList(db.Books, "BookID", "BookName");
-            ViewBag.OrderID = new SelectList(db.BorrowBooks, "OrderID", "OrderID");
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "CusName");
             return View();
         }
 
-        // POST: ReturnBooks/Create
+        // POST: BorrowBooks/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReturnBookID,OrderID,BookID,ReturnDay,Quantity")] ReturnBook returnBook)
+        public ActionResult Create([Bind(Include = "BorrowBookID,BorrowDay,CustomerID,OderTotal")] BorrowBook borrowBook)
         {
             if (ModelState.IsValid)
             {
-                db.ReturnBooks.Add(returnBook);
+                db.BorrowBooks.Add(borrowBook);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.BookID = new SelectList(db.Books, "BookID", "BookName", returnBook.BookID);
-            ViewBag.OrderID = new SelectList(db.BorrowBooks, "OrderID", "OrderID", returnBook.OrderID);
-            return View(returnBook);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "CusName", borrowBook.CustomerID);
+            return View(borrowBook);
         }
 
-        // GET: ReturnBooks/Edit/5
+        // GET: BorrowBooks/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ReturnBook returnBook = db.ReturnBooks.Find(id);
-            if (returnBook == null)
+            BorrowBook borrowBook = db.BorrowBooks.Find(id);
+            if (borrowBook == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.BookID = new SelectList(db.Books, "BookID", "BookName", returnBook.BookID);
-            ViewBag.OrderID = new SelectList(db.BorrowBooks, "OrderID", "OrderID", returnBook.OrderID);
-            return View(returnBook);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "CusName", borrowBook.CustomerID);
+            return View(borrowBook);
         }
 
-        // POST: ReturnBooks/Edit/5
+        // POST: BorrowBooks/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ReturnBookID,OrderID,BookID,ReturnDay,Quantity")] ReturnBook returnBook)
+        public ActionResult Edit([Bind(Include = "BorrowBookID,BorrowDay,CustomerID,OderTotal")] BorrowBook borrowBook)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(returnBook).State = EntityState.Modified;
+                db.Entry(borrowBook).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.BookID = new SelectList(db.Books, "BookID", "BookName", returnBook.BookID);
-            ViewBag.OrderID = new SelectList(db.BorrowBooks, "OrderID", "OrderID", returnBook.OrderID);
-            return View(returnBook);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "CusName", borrowBook.CustomerID);
+            return View(borrowBook);
         }
 
-        // GET: ReturnBooks/Delete/5
+        // GET: BorrowBooks/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ReturnBook returnBook = db.ReturnBooks.Find(id);
-            if (returnBook == null)
+            BorrowBook borrowBook = db.BorrowBooks.Find(id);
+            if (borrowBook == null)
             {
                 return HttpNotFound();
             }
-            return View(returnBook);
+            return View(borrowBook);
         }
 
-        // POST: ReturnBooks/Delete/5
+        // POST: BorrowBooks/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ReturnBook returnBook = db.ReturnBooks.Find(id);
-            db.ReturnBooks.Remove(returnBook);
+            BorrowBook borrowBook = db.BorrowBooks.Find(id);
+            db.BorrowBooks.Remove(borrowBook);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

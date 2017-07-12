@@ -15,10 +15,9 @@ namespace RentBook.Models
     public partial class ReturnBook
     {
         public int ReturnBookID { get; set; }
-        public int OrderID { get; set; }
+        public int BorrowBookID { get; set; }
         public int BookID { get; set; }
         public System.DateTime ReturnDay { get; set; }
-        public int Quantity { get; set; }
     
         public virtual Book Book { get; set; }
         public virtual BorrowBook BorrowBook { get; set; }

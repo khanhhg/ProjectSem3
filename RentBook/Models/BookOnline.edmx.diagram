@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4c3835b29de74a9780c192805e8a7bea" Name="Diagram1">
+      <Diagram DiagramId="9ebb3527c9714e6a8f3f99107eec928c" Name="Diagram1">
         <EntityTypeShape EntityType="BookOnlineModel.Author" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BookOnlineModel.Book" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.BorrowBook" Width="1.5" PointX="3.125" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.BorrowBookDetail" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.BorrowBook" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.BorrowBookDetail" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BookOnlineModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.Customer" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.FeedBack" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.News" Width="1.5" PointX="2.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.Customer" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.FeedBack" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.News" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="BookOnlineModel.Publisher" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.ReturnBook" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookOnlineModel.sysdiagram" Width="1.5" PointX="4.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.ReturnBook" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookOnlineModel.sysdiagram" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
         <AssociationConnector Association="BookOnlineModel.FK_Book_Author" ManuallyRouted="false" />
         <AssociationConnector Association="BookOnlineModel.FK_Book_Category" ManuallyRouted="false" />
         <AssociationConnector Association="BookOnlineModel.FK_Book_Publisher" ManuallyRouted="false" />
@@ -25,8 +25,6 @@
         <AssociationConnector Association="BookOnlineModel.FK_BorrowBookDetail_BorrowBook" ManuallyRouted="false" />
         <AssociationConnector Association="BookOnlineModel.FK_ReturnBook_BorrowBook" ManuallyRouted="false" />
         <AssociationConnector Association="BookOnlineModel.FK_FeedBack_Customer" ManuallyRouted="false" />
-        <AssociationConnector Association="BookOnlineModel.FK_BorrowBookDetail_BorrowBook1" />
-        <AssociationConnector Association="BookOnlineModel.FK_ReturnBook_BorrowBook1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

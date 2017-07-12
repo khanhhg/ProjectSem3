@@ -54,20 +54,27 @@
 
 
     <div class="fix content_area">
-
+        
         <div class="fix top_add_bar">
+            
             <div class="addbar_leaderborard">
-                <img src="~/Images/banner-dich-sach.jpg" /></div>
+                <img src="~/Images/Image_top.JPG" style="width:900px;height:70px;align-items:center" />  
+                
+            </div>
+
+           
         </div>
 
         <div class="manu_area">
             <div class="mainmenu menu-wrap wrap">
                 <ul id="nav-bottom">
-                    <li><a href="">Categories</a></li>
+                    <li><a href="~/News/NewsPage">News</a></li>
                     <li><a href="">Freebies</a></li>
                     <li>
                         <a href="">Services</a>
                         <ul>
+                            <li style="display"><a href="">Single item</a></li>
+                            <li><a href="">Single item</a></li>
                             <li><a href="">Single item</a></li>
                             <li><a href="">Single item</a></li>
                             <li><a href="">Single item</a></li>
@@ -78,9 +85,15 @@
                     <li><a href="">Gallery</a></li>
                     <li><a href="">About us</a></li>
                     <li><a href="">Privacy policy</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="">Contact us</a>
+                        <ul>
+                            <li><a href="">Single item</a></li>
+                            <li><a href="">Single item</a></li>
+                           
+                        </ul>
+                    </li>
                 </ul>
-                @Html.Action("GioHangPartial", "GioHang")
+               <div style="float:right"> @Html.Action("GioHangPartial", "GioHang")</div>
             </div>
            
         </div>
@@ -89,185 +102,8 @@
                
                 <div class="fix main_content floatleft">
                     @RenderBody()
-                    
-                    @*<div class="fix single_content_wrapper">
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="fix single_content floatleft">
-                            <img src="images/home_featured.png" alt="" />
-                            <div class="fix single_content_info">
-                                <h1>Ullamcorper Mollis Pellentesque</h1>
-                                <p class="author">By Admin In Photography,Wine,Food</p>
-                                <p>
-                                    Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Donec
-                                    id elit non mi porta gravida at eget metus. Nullam id dolor id ultricies .
-                                </p>
-                                <div class="fix post-meta">
-                                    <p>26 Sep, 2012  |  24 Comments</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="pagination fix">
-                        <a href="">1</a>
-                        <a href="">1</a>
-                        <a href="">1</a>
-                        <a href="">1</a>
-                        <a href="">1</a>
-                        <a href="">1</a>
-                    </div>*@
+                   
+                   
                 </div>
                
                 <div class="fix sidebar floatright">
@@ -280,28 +116,15 @@
                     <div class="fix single_sidebar">
                         <div class="popular_post fix">
                             <h2>News</h2>
-                            <div class="fix single_popular">
-                                <img src="images/popular.png" class="floatleft" />
-                                <h2>Vestibum Malesuada Etiam Magna</h2>
-                                <p>12 Nov, 2012</p>
-                            </div>
-                            <div class="fix single_popular">
-                                <img src=" class="floatleft" />
-                                <h2>Vestibum Malesuada Etiam Magna</h2>
-                                <p>12 Nov, 2012</p>
-                            </div>
-                            <div class="fix single_popular">
-                                <img src="images/popular.png" class="floatleft" />
-                                <h2>Vestibum Malesuada Etiam Magna</h2>
-                                <p>12 Nov, 2012</p>
+                            @Html.Action("NewsPartial","Home")
                             </div>
                         </div>
                         @****************************************@
                         <div class="popular_post fix">
                             <h2>New Book</h2>
                             @Html.Action("NewBookPartial","Home")
-                            @*<div class="fix single_popular">
-                                <img src="images/popular.png" class="floatleft" />
+                            <div class="fix single_popular">
+                                @*<img src="images/popular.png" class="floatleft" />
                                 <h2>Vestibum Malesuada Etiam Magna</h2>
                                 <p>12 Nov, 2012</p>
                             </div>
@@ -313,12 +136,12 @@
                             <div class="fix single_popular">
                                 <img src="images/popular.png" class="floatleft" />
                                 <h2>Vestibum Malesuada Etiam Magna</h2>
-                                <p>12 Nov, 2012</p>
-                            </div>*@
+                                <p>12 Nov, 2012</p>*@
+                            </div>
                         </div>
                         @****************************************@
 
-                    </div>
+                    @*</div>*@
                    
                     <div class="fix single_sidebar">
                         <h2>A little about me</h2>

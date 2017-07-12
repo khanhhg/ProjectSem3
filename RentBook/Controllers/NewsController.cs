@@ -133,5 +133,9 @@ namespace RentBook.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult NewsPage()
+        {
+            return View(db.News.ToList());
+        }
     }
 }

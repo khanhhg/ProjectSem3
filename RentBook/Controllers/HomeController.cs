@@ -31,6 +31,10 @@ namespace RentBook.Controllers
         {
             return PartialView(db.Books.Take(4).ToList());
         }
+        public ActionResult NewsPartial()
+        {
+            return PartialView(db.News.Take(4).ToList());
+        }
      
     }
 }

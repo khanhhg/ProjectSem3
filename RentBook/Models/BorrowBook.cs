@@ -21,7 +21,7 @@ namespace RentBook.Models
             this.ReturnBooks = new HashSet<ReturnBook>();
         }
     
-        public int OrderID { get; set; }
+        public int BorrowBookID { get; set; }
         public System.DateTime BorrowDay { get; set; }
         public int CustomerID { get; set; }
         public decimal OderTotal { get; set; }
